@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Assignment #1</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header class="cabecalhoPrincipal">
         <h1 class="cabecalhoPrincipal-titulo">Build a landing page for your business or project and generate more leads!</h1>
     </header>
     <main class="conteudoPrincipal">
-        <div class="container">
-            <div>
-                <img src="img/responsive.png" alt="Images of a cellphone, a desktop and a tablet representing that the site is responsive for all devices">
-                <h2>Fully Responsive</h2>
-                <p>This theme will look great on any device, no matter the size!</p>
-            </div>
-            <div>
-                <img src="img/friendly.png" alt="A hand snaping his fingers to demonstrate that the site is easy to use">
-                <h2>Easy to use</h2>
-                <p>Ready to use with your own content, or customize the source files!</p>
-            </div>
+        <div>
+            <img src="img/responsive.png" alt="Images of a cellphone, a desktop and a tablet representing that the site is responsive for all devices">
+            <h2>Fully Responsive</h2>
+            <p>This theme will look great on any device, no matter the size!</p>
+        </div>
+        <div>
+            <img src="img/friendly.png" alt="A hand snaping his fingers to demonstrate that the site is easy to use">
+            <h2>Easy to use</h2>
+            <p>Ready to use with your own content, or customize the source files!</p>
         </div>
     </main>
     <section>
         <div class="container">
             <ul class="conteudoExplicacao">
-                <div>
-                <li class="conteudoExplicacao-texto">
-                    <h2>Fully Responsive Design</h2>
-                    <p>Our themes will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
-                </li>
-                <li>
-                    <img src="img/responsivedesign.png" alt="Cellphone, Tablet and Desktop">
-                </li>
+                <div class="conteudoExplicacao-bloco-1">
+                    <li class="conteudoExplicacao-texto">
+                        <h2>Fully Responsive Design</h2>
+                        <p>Our themes will look great on any device, whether it's a phone, tablet, or desktop the page will
+                            behave responsively!</p>
+                    </li>
+                    <li class="conteudoExplicacao-img-1">
+                        <img src="img/responsivedesign.png" alt="Cellphone, Tablet and Desktop">
+                    </li>
                 </div>
-                <div>
-                <li>
-                    <img src="img/baby.jpg" alt="A baby using a notebook">
-                </li>
-                <li class="conteudoExplicacao-texto">
-                    <h2>Easy to Use & Customize!</h2>
-                    <p>Landing page is just HTML, CSS and JavaScript. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
-                </li>
+                <div class="conteudoExplicacao-bloco-2">
+                    <li>
+                        <img src="img/baby.jpg" alt="A baby using a notebook">
+                    </li>
+                    <li class="conteudoExplicacao-texto">
+                        <h2>Easy to Use & Customize!</h2>
+                        <p>Landing page is just HTML, CSS and JavaScript. Out of the box, just add your content and images,
+                            and your new landing page will be ready to go!</p>
+                    </li>
                 </div>
             </ul>
         </div>
@@ -52,7 +54,8 @@
     <section class="conteudoVideo">
         <div class="container">
             <h2>But what is a Landing Page after all?</h2>
-            <iframe width="854" height="480" src="https://www.youtube.com/embed/u8PrfiwZS70" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe class="conteudoVideo-video" width="854" height="480" src="https://www.youtube.com/embed/u8PrfiwZS70" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
         </div>
     </section>
     <section class="conteudoPessoas">
@@ -60,17 +63,17 @@
             <h2 class="conteudoPessoas-titulo">What people are saying...</h2>
             <ul class="conteudoPessoas-people">
                 <li>
-                    <img src="img/sophia.jpg" alt="A woman smiling" class="conteudoPessoas-img">
+                    <img class="conteudoPessoas-img" src="img/sophia.jpg" alt="A woman smiling">
                     <h3>Sophia H.</h3>
                     <p class="conteudoPessoas-txt">"This is fantastic! Thank you so much!"</p>
                 </li>
                 <li>
-                    <img src="img/roger.jpg" alt="A man with a handcap smiling" class="conteudoPessoas-img">
+                    <img class="conteudoPessoas-img" src="img/roger.jpg" alt="A man with a handcap smiling">
                     <h3>Roger B.</h3>
                     <p class="conteudoPessoas-txt">"My business has grown exponentially!"</p>
                 </li>
                 <li>
-                    <img src="img/samantha.jpg" alt="A woman holding her cellphone smiling" class="conteudoPessoas-img">                    
+                    <img class="conteudoPessoas-img" src="img/samantha.jpg" alt="A woman holding her cellphone smiling">
                     <h3>Samantha F.</h3>
                     <p class="conteudoPessoas-txt">"It is so easy to customize!"</p>
                 </li>
@@ -80,10 +83,10 @@
     <section class="conteudoForm">
         <div class="container">
             <h2 class="conteudoForm-titulo">Ready to get started? Sign up now!</h2>
-            <form class="conteudoForm-form"> 
-                <input type="text" placeholder="Full Name" required class="conteudoForm-campo">
-                <input type="email" placeholder="Email" required class="conteudoForm-campo">
-                <button type="submit" class="conteudoForm-botao">Sign up!</button>
+            <form class="conteudoForm-form">
+                <input class="conteudoForm-campo" type="text" placeholder="Full Name" required>
+                <input class="conteudoForm-campo" type="email" placeholder="Email" required>
+                <button class="conteudoForm-botao" type="submit">Sign up!</button>
             </form>
         </div>
     </section>

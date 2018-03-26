@@ -1,11 +1,12 @@
 body {
 	background-color: #FFF;
-	font-family: Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 .container {
 	width: 94%;
 	margin: 0 auto;
+	max-width: 100%;
 }
 
 p {
@@ -44,7 +45,8 @@ h3 {
 	text-align: center;
 }
 
-.conteudoPrincipal .container{
+.conteudoPrincipal {
+	margin: 94%;
 	display: flex;
 	justify-content: space-around;
 	margin: 98px 98px;
@@ -62,7 +64,6 @@ h3 {
 
 .conteudoExplicacao {
 	display: flex;
-	width: 100%;
 	flex-wrap: wrap; 
 }
 
@@ -89,8 +90,10 @@ h3 {
 }
 
 .conteudoVideo {
+	display: flex;
 	text-align: center;
 	padding: 5% 10% 5% 10%;
+	flex-grow: 2;
 }
 
 .conteudoVideo h2{
@@ -175,15 +178,65 @@ h3 {
 .conteudoCabecalho {
 	padding: 2% 0 1% 0;
 	background: #F2F5F7;
-	text-align: end;
+	text-align: center;
 	color: #212529;
 	opacity: 0.7;
 	font-size: 0.75rem;
 }
 
+.conteudoVideo-video {
+	max-width: 100%;
+}
+
 @media(max-width: 768px) {
 	.conteudoPrincipal {
-		flex-direction: column;
-
+		flex-direction: column; 
 	}
+
+	.cabecalhoPrincipal-titulo {
+		margin-right: 10px;
+		margin-left: 10px;
+		margin-bottom: 0;
+	}
+
+	.conteudoPessoas-people {
+		flex-direction: column;
+	}
+
+	.conteudoPrincipal p {
+		width: 100%;
+	}
+
+	.conteudoExplicacao-bloco-2 {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.conteudoExplicacao-bloco-1 {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.conteudoExplicacao li {
+		width: 100%;
+	}
+
+	.conteudoForm-form {
+		margin: 0;
+		width: 100%;
+	}
+
+	.conteudoVideo {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	.conteudoVideo .container{
+		margin: 0;
+	}
+
+	.conteudoVideo-video {
+		height: 286px;
+	}
+
 }
