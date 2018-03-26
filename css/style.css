@@ -3,6 +3,11 @@ body {
 	font-family: Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
+.container {
+	width: 94%;
+	margin: 0 auto;
+}
+
 p {
 	color: #212529;
 	opacity: 0.7;
@@ -25,7 +30,7 @@ h3 {
 }
 
 .cabecalhoPrincipal {
-	padding: 18% 0;
+	padding: 243px 0;
 	background-image: url("http://www.spikedseltzer.com/wp-content/uploads/2015/04/Landing-Page-Background-for-Desktop-V6.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -39,20 +44,19 @@ h3 {
 	text-align: center;
 }
 
-.conteudoPrincipal {
+.conteudoPrincipal .container{
 	display: flex;
-	align-content: center;
 	justify-content: space-around;
-	margin: 20% 20%;
-	padding: 100px 0px 100px 0px;
+	margin: 98px 98px;
+	padding: 35px 0px 35px 0px;
 	text-align: center;
 }
 
-.conteudoPrincipal li img {
+.conteudoPrincipal img {
 	padding-bottom: 20px;
 }
 
-.conteudoPrincipal li p {
+.conteudoPrincipal p {
 	width: 350px;
 }
 
@@ -125,4 +129,61 @@ h3 {
 	padding: 9% 0;
 	background-image: url("http://www.spikedseltzer.com/wp-content/uploads/2015/04/Landing-Page-Background-for-Desktop-V6.jpg");
 	background-repeat: no-repeat;
+}
+
+.conteudoForm-titulo {
+	font-weight: bold;
+	font-size: 2rem;
+	margin-bottom: 20px;
+	line-height: 1.1;
+	text-align: center;
+	color: #FFF;
+}
+
+.conteudoForm-campo {
+	border: none;
+	border-radius: 4px;
+	background-color: #FFF;
+	box-sizing: border-box;
+	padding: 12px;
+	margin: 2px;
+}
+
+.conteudoForm-botao {
+	border-radius: 4px;
+	padding: 12px;
+	text-align: center;
+  font-size: 16px;
+	transition: 0.3s;
+	border: none;
+	background-color: #66b3ff;
+	color: #FFF;
+	margin: 2px;
+}
+
+.conteudoForm-botao:hover {
+	background-color: #3e8e41;
+}
+
+.conteudoForm-form {
+	display: flex;
+	flex-direction: column;
+	margin-right: 25%;
+	margin-left: 25%;
+}
+
+.conteudoCabecalho {
+	padding: 2% 0 1% 0;
+	background: #F2F5F7;
+	text-align: end;
+	color: #212529;
+	opacity: 0.7;
+	font-size: 0.75rem;
+}
+
+@media(max-width: 768px) {
+	.conteudoPrincipal {
+		flex-direction: column;
+
+	}
 }
