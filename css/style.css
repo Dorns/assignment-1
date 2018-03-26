@@ -31,7 +31,7 @@ h3 {
 
 .cabecalhoPrincipal {
 	padding: 243px 0;
-	background-image: url("http://www.spikedseltzer.com/wp-content/uploads/2015/04/Landing-Page-Background-for-Desktop-V6.jpg");
+	background-image: url("../img/background.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -127,7 +127,7 @@ h3 {
 
 .conteudoForm {
 	padding: 9% 0;
-	background-image: url("http://www.spikedseltzer.com/wp-content/uploads/2015/04/Landing-Page-Background-for-Desktop-V6.jpg");
+	background-image: url("../img/background.jpg");
 	background-repeat: no-repeat;
 }
 
