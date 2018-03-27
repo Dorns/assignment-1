@@ -5,7 +5,10 @@ var tbClientes = localStorage.getItem("clientes") ? JSON.parse(localStorage.getI
 function addForm(event) {
   event.preventDefault();
 
-  if (validaForm()==true){
+  var validaN = validaNome();
+  var validaE = validaEmail();
+
+  if (validaN==true && validaE==true){
     cadastraCli();
   }else{
     document.getElementById("divSucesso").style.display = 'none';
@@ -22,23 +25,23 @@ function cadastraCli() {
   localStorage.setItem("clientes", JSON.stringify(tbClientes));
   document.getElementById("divSucesso").style.display = 'block';
   limpaFormulario();
-
 }
 
-function validaForm(){
+function validaNome() {
   if (!/[a-z]\s[a-z]/gim.test(this.nome.value)) {
     document.getElementById("erroNome").style.display = 'block';
     return false;
-  }else{
-    document.getElementById("erroNome").style.display = 'none';
   }
-    
+  document.getElementById("erroNome").style.display = 'none';
+  return true;
+}
+
+function validaEmail() {
   if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email.value)){
     document.getElementById("erroEmail").style.display = 'block';
     return false;
-  }else{
-    document.getElementById("erroNome").style.display = 'none';
   }
+  document.getElementById("erroEmail").style.display = 'none';
   return true;
 }
 
