@@ -1,6 +1,5 @@
 var nome = document.querySelector('#nome');
-var email = document.querySelector('#email');
-var tbClientes = localStorage.getItem("clientes") ? JSON.parse(localStorage.getItem('clientes')) : [];
+var email = document.querySelector('#email'); 
 
 function addForm(event) {
   event.preventDefault();
@@ -17,12 +16,14 @@ function addForm(event) {
 }
 
 function cadastraCli() {
-  let cliente = JSON.stringify({
-		Nome     : nome.value,
-		Email    : email.value
-  });
-  tbClientes.push(cliente);
-  localStorage.setItem("clientes", JSON.stringify(tbClientes));
+  let updates = {};
+  updates[`/clientes/${this.gerarID('clientes')}`] = {
+    Nome: nome.value,
+    Email: email.value,
+  };
+  
+  firebase.database().ref().update(updates);
+
   document.getElementById("divSucesso").style.display = 'block';
   limpaFormulario();
 }
@@ -49,4 +50,8 @@ function limpaFormulario() {
   this.nome.value = "";
   this.email.value = "";
   this.nome.focus();
+}
+
+function gerarID(referencia){
+  return firebase.database().ref().child(referencia).push().key;
 }
