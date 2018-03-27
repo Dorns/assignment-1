@@ -188,6 +188,19 @@ h3 {
 	max-width: 100%;
 }
 
+.conteudoForm-sucesso {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	opacity: 1;
+	margin-top: 18px;
+	border-radius: 4px;
+	padding: 12px;
+	margin-right: 25%;
+	margin-left: 25%;
+	text-align: center;
+}
+
 @media(max-width: 768px) {
 	.conteudoPrincipal {
 		flex-direction: column; 
@@ -239,4 +252,7 @@ h3 {
 		height: 286px;
 	}
 
+	.conteudoForm-sucesso {
+		margin: 0;
+	}
 }

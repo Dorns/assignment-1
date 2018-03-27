@@ -83,9 +83,9 @@
     <section class="conteudoForm">
         <div class="container">
             <h2 class="conteudoForm-titulo">Ready to get started? Sign up now!</h2>
-            <form class="conteudoForm-form">
-                <input class="conteudoForm-campo" type="text" placeholder="Full Name" required>
-                <input class="conteudoForm-campo" type="email" placeholder="Email" required>
+            <form class="conteudoForm-form" id="form" onsubmit="return addForm(event)"> 
+                <input class="conteudoForm-campo" id="nome" type="text" placeholder="Full Name" required>
+                <input class="conteudoForm-campo" id="email" type="email" placeholder="Email" required>
                 <button class="conteudoForm-botao" type="submit">Sign up!</button>
             </form>
         </div>
@@ -93,5 +93,6 @@
     <footer class="conteudoCabecalho">
         <small>© Your Website 2018. All Rights Reserved.</small>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>
