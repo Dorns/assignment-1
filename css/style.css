@@ -196,9 +196,21 @@ h3 {
 	margin-top: 18px;
 	border-radius: 4px;
 	padding: 12px;
-	margin-right: 25%;
-	margin-left: 25%;
 	text-align: center;
+	display: none;
+}
+
+.conteudoForm-erro {
+	color: #861d1d;
+	background-color: #f0d8d8;
+	border-color: #e9c6c8;
+	opacity: 1;
+	margin-top: 18px;
+	border-radius: 4px;
+	padding: 12px;
+	text-align: center;
+	display: none;
+	margin-bottom: 18px;
 }
 
 @media(max-width: 768px) {
@@ -253,6 +265,10 @@ h3 {
 	}
 
 	.conteudoForm-sucesso {
+		margin: 0;
+	}
+
+	.conteudoForm-erro {
 		margin: 0;
 	}
 }

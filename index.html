@@ -85,8 +85,11 @@
             <h2 class="conteudoForm-titulo">Ready to get started? Sign up now!</h2>
             <form class="conteudoForm-form" id="form" onsubmit="return addForm(event)"> 
                 <input class="conteudoForm-campo" id="nome" type="text" placeholder="Full Name" required>
+                <div class="conteudoForm-erro" id="erroNome">Enter Your full name!</div>
                 <input class="conteudoForm-campo" id="email" type="email" placeholder="Email" required>
+                <div class="conteudoForm-erro" id="erroEmail">Use a valid email!</div>
                 <button class="conteudoForm-botao" type="submit">Sign up!</button>
+                <div class="conteudoForm-sucesso" id="divSucesso">Registered Successfully!</div>
             </form>
         </div>
     </section>

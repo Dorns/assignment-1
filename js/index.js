@@ -1,33 +1,16 @@
 var nome = document.querySelector('#nome');
 var email = document.querySelector('#email');
-var tbClientes = localStorage.getItem("tbClientes");
+var tbClientes = localStorage.getItem("clientes") ? JSON.parse(localStorage.getItem('clientes')) : [];
 
 function addForm(event) {
-  tbClientes = JSON.parse(tbClientes); 
-  if(tbClientes == null) 
-    tbClientes = [];
-
   event.preventDefault();
 
-  if (validaForm()==false){
-    limpaFormulario();
-  }else{
+  if (validaForm()==true){
     cadastraCli();
+  }else{
+    document.getElementById("divSucesso").style.display = 'none';
     limpaFormulario();
   }
-}
-
-function validaForm() {
-  if (!/[a-z]\s[a-z]/gim.test(this.nome.value)) {
-    document.getElementById("nome").style.color = "red";
-    return false;
-  }
-    
-  if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email.value)){
-    document.getElementById("email").style.color = "red";
-    return false;
-  }
-  return true;
 }
 
 function cadastraCli() {
@@ -36,7 +19,27 @@ function cadastraCli() {
 		Email    : email.value
   });
   tbClientes.push(cliente);
-  localStorage.setItem("tbClientes", JSON.stringify(tbClientes));
+  localStorage.setItem("clientes", JSON.stringify(tbClientes));
+  document.getElementById("divSucesso").style.display = 'block';
+  limpaFormulario();
+
+}
+
+function validaForm(){
+  if (!/[a-z]\s[a-z]/gim.test(this.nome.value)) {
+    document.getElementById("erroNome").style.display = 'block';
+    return false;
+  }else{
+    document.getElementById("erroNome").style.display = 'none';
+  }
+    
+  if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email.value)){
+    document.getElementById("erroEmail").style.display = 'block';
+    return false;
+  }else{
+    document.getElementById("erroNome").style.display = 'none';
+  }
+  return true;
 }
 
 function limpaFormulario() {
