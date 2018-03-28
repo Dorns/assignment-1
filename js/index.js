@@ -13,7 +13,6 @@ function addForm(event) {
     cadastraCli();
   }else{
     document.getElementById("divSucesso").style.display = 'none';
-    limpaFormulario();
   }
 }
 
@@ -55,7 +54,7 @@ function validaEmail() {
 
 function validaEmpresa() {
   var erroEmpresa = document.getElementById("erroEmpresa");
-  if (!/[a-z]/gim.test(this.empresa)) {
+  if (!/^\w[\w.\-#&\s]*$/gim.test(this.empresa.value)) {
     erroEmpresa.style.display = 'block';
     erroEmpresa.innerHTML = "Enter a valid company name!"
     return false;
