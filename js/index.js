@@ -55,7 +55,7 @@ function validaEmail() {
 
 function validaEmpresa() {
   var erroEmpresa = document.getElementById("erroEmpresa");
-  if (!/^[.@&]?[a-zA-Z0-9 ]+[ !.@&()]?[ a-zA-Z0-9!()]+/.test(this.empresa)) {
+  if (!/[a-z]/gim.test(this.empresa)) {
     erroEmpresa.style.display = 'block';
     erroEmpresa.innerHTML = "Enter a valid company name!"
     return false;
